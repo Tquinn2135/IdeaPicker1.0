@@ -5,8 +5,10 @@ public class Repository
 {
     private readonly SQLiteConnection _database;
 
-    public Repository(string dbPath)
+    public Repository()
     {
+        var dbPath = Path.Combine(Environment.GetFolderPath(
+            Environment.SpecialFolder.LocalApplicationData), "ideas.db");
         _database = new SQLiteConnection(dbPath);
         _database.CreateTable<Idea>();
     }

@@ -6,7 +6,8 @@
     <StackLayout Padding="20">
         <Label Text="Select A Random Idea" FontSize="Large" HorizontalOptions="Center"/>
         <Button x:Name="btnSelectIdea" Margin="20" Text="Select Idea" Clicked="BtnSelectIdea_OnClicked"/>
-        <Label x:Name="lblFName" FontSize="Large" HorizontalOptions="Center"/>
+        
+        <Label x:Name="lblFName" Padding="20" FontSize="Large" HorizontalOptions="Center"/>
         <Label x:Name="lblActivity" FontSize="Large" HorizontalOptions="Center"/>
     </StackLayout>
 </ContentPage>

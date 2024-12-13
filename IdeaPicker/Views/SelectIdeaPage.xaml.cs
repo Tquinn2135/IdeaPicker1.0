@@ -9,27 +9,25 @@ namespace IdeaPicker.Views;
 
 public partial class SelectIdeaPage : ContentPage
 {
-    private readonly Repository _repository;
+    
     
     public SelectIdeaPage()
     {
         InitializeComponent();
-        var dbPath = Path.Combine(FileSystem.AppDataDirectory, "ideas.db");
-        _repository = new Repository(dbPath);
     }
 
     private void BtnSelectIdea_OnClicked(object sender, EventArgs e)
     {
-        var randomIdea = _repository.GetRandomIdea();
+        var randomIdea = App.IdeaList.GetRandomIdea();
+        
         if (randomIdea != null)
         {
-            lblFName.Text = $"Winner:  {randomIdea.FName}";        //used these instead of a list since
-            lblActivity.Text = $"Activity:  {randomIdea.IdeaName}"; //I only need one result from the DB
-
+            lblFName.Text = "Winner: " + randomIdea.FName;
+            lblActivity.Text = "Activity Selected: " + randomIdea.IdeaName;
         }
         else
         {
-            lblActivity.Text = "No Ideas Found";
+            lblActivity.Text = "No Ideas Found.";
         }
     }
 }
