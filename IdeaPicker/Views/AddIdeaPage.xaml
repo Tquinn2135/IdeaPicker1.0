@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IdeaPicker.Views.AddIdeaPage">
+    <ContentPage.Content>
+        <StackLayout Padding = "20,20">
+            <Label Text="Add First Name" FontSize="Large" FontAttributes="Bold" />
+            <Border Stroke="gray" StrokeThickness="1" Margin="0,10,0,30">
+                <Entry x:Name="txtFName"/>
+            </Border>
+            <Label Text="Add Idea" FontSize="Large" FontAttributes="Bold" Margin="0,10,0,15"/>
+            <Border Stroke="gray" StrokeThickness="1" Margin="0,10,0,40">
+                <Entry x:Name="txtIdeaName"/>
+            </Border>
+            <Button x:Name="btnAdd" Text="Add Idea" FontSize="Large" Clicked="AddIdea_OnClicked" Margin="0,0,0,30" />
+            <Button x:Name = "btnClear" Text="Clear" FontSize="Large" Clicked="BtnClear_OnClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
